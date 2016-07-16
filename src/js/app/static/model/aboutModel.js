@@ -1,6 +1,6 @@
 define([
-	'underscore',
-	'backbone'
+    'underscore',
+    'backbone'
 ], function (_, Backbone) {
     'use strict';
 

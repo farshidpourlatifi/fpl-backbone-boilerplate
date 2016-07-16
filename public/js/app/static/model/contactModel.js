@@ -1,6 +1,6 @@
 define([
-	'underscore',
-	'backbone'
+    'underscore',
+    'backbone'
 ], function (_, Backbone) {
     'use strict';
 
@@ -8,7 +8,7 @@ define([
         defaults: {
             Name: null,
             Email: null,
-						Message: null
+            Message: null
         }
     });
 

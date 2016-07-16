@@ -35,6 +35,7 @@ define(
         ContactModel,
         ContactView
     ) {
+        'use strict';
         var App = {
 
             appRoutes: null,
@@ -101,7 +102,7 @@ define(
                 // worker.addEventListener('message', function(event) {
                 //     var data = event.data;
                 //     // primeFactorization(5000000000425343804321);
-                //     console.log("main: message", data);
+                //     console.log('main: message', data);
                 // });
                 // worker.postMessage({data:'Data From App.'});
                 // debugger;
@@ -113,7 +114,7 @@ define(
             },
 
             Destroy: function() {
-                Backbone.history.stop()
+                Backbone.history.stop();
                 Backbone.history = undefined; // Could also probably use delete here :)
                 //Backbone.history.delete();
             },

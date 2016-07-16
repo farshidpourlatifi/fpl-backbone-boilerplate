@@ -10,13 +10,13 @@ define([
     var AppRoute = Backbone.Router.extend({
 
         routes: {
-            // "": "home", // #home
-            // "home": "home", // #home
-            // "help": "help", // #help
-            // "about": "about", // #about
-            // "contact": "contact", // #contact
-            // "search/:query": "search", // #search/kiwis
-            // "search/:query/p:page": "search" // #search/kiwis/p7
+            // '': 'home', // #home
+            // 'home': 'home', // #home
+            // 'help': 'help', // #help
+            // 'about': 'about', // #about
+            // 'contact': 'contact', // #contact
+            // 'search/:query': 'search', // #search/kiwis
+            // 'search/:query/p:page': 'search' // #search/kiwis/p7
         },
         //
         // home: function() {

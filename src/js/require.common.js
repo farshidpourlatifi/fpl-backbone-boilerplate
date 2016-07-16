@@ -1,4 +1,5 @@
-﻿var AppURLs = {
+﻿'use strict';
+var AppURLs = {
 
     VERSION: '0.0.1',
     URL_VERSION: null,
@@ -14,33 +15,33 @@ requirejs.config({
         // http://requirejs.org/docs/api.html#config-urlArgs
         // http://stackoverflow.com/a/901144
         if (url.indexOf('require.common.js') !== -1) {
-            var regex = new RegExp("[?&]v(=([^&#]*)|&|#|$)"),
-            results = regex.exec(url);
-            AppURLs.URL_VERSION = (!results) ? null : ((!results[2]) ? '' : decodeURIComponent(results[2].replace(/\+/g, " ")));
+            var regex = new RegExp('[?&]v(=([^&#]*)|&|#|$)'),
+                results = regex.exec(url);
+            AppURLs.URL_VERSION = (!results) ? null : ((!results[2]) ? '' : decodeURIComponent(results[2].replace(/\+/g, ' ')));
         }
         return (AppURLs.URL_VERSION === null || AppURLs.URL_VERSION === '') ? '' : (url.indexOf('?') === -1 ? '?' : '&') + AppURLs.URL_VERSION;
     },
     waitSeconds: 10,
-    baseUrl: AppURLs.Static + "/js",
+    baseUrl: AppURLs.Static + '/js',
     paths: {
-        //"jquery": "vendor/jquery-1.10.2",
-        "jquery": "vendor/jquery.slim",
-        "underscore": "vendor/underscore",
-        "backbone": "vendor/backbone",
-        "backbone.radio": "vendor/backbone.radio",
-        "backbone.nativeview": "vendor/backbone.nativeview",
-        "backbone.nativeajax": "vendor/backbone.nativeajax",
-        "bootstrap": "vendor/bootstrap-native",
-        //"bootstrap": "vendor/bootstrap",
-        "text": "vendor/text",
-        //"jquery.XDomainRequest": "vendor/jquery.XDomainRequest",
-        "App": "app/app",
-        //"AppAjax": "app/app.ajax",
-        //"AppDateTime": "app/app.datetime",
-        //"AppCookie": "app/app.cookie",
-        //"AppLocalStorage": "app/app.localstorage",
-        //"AppSampleWidget": "app/app.sample.widget",
-        //"AppFormat": "app/app.format"
+        //'jquery': 'vendor/jquery-1.10.2',
+        'jquery': 'vendor/jquery.slim',
+        'underscore': 'vendor/underscore',
+        'backbone': 'vendor/backbone',
+        'backbone.radio': 'vendor/backbone.radio',
+        'backbone.nativeview': 'vendor/backbone.nativeview',
+        'backbone.nativeajax': 'vendor/backbone.nativeajax',
+        'bootstrap': 'vendor/bootstrap-native',
+        //'bootstrap': 'vendor/bootstrap',
+        'text': 'vendor/text',
+        //'jquery.XDomainRequest': 'vendor/jquery.XDomainRequest',
+        'App': 'app/app',
+        //'AppAjax': 'app/app.ajax',
+        //'AppDateTime': 'app/app.datetime',
+        //'AppCookie': 'app/app.cookie',
+        //'AppLocalStorage': 'app/app.localstorage',
+        //'AppSampleWidget': 'app/app.sample.widget',
+        //'AppFormat': 'app/app.format'
     },
     shim: {
         // jquery: {
@@ -61,7 +62,7 @@ requirejs.config({
         // text: {
         //     deps: ['underscore', 'jquery.XDomainRequest']
         // },
-        // "jquery.XDomainRequest": {
+        // 'jquery.XDomainRequest': {
         //     deps: ['jquery']
         // }
     },
@@ -87,29 +88,29 @@ requirejs.config({
                 //port: port of page text.js is running on
                 //Use protocol, hostname, and port to compare against the url
                 //being requested.
-                //Return true or false. true means "use xhr", false means
-                //"fetch the .js version of this resource".
+                //Return true or false. true means 'use xhr', false means
+                //'fetch the .js version of this resource'.
                 return true;
             }
         }
     },
     // bundles: {
     //   'app/bundles/app.utils.bundle': [
-		// 	"AppAjax",
-		// 	"AppCookie",
-		// 	"AppLocalStorage",
-    //   "AppDateTime",
-    //   "AppFormat"
+		// 	'AppAjax',
+		// 	'AppCookie',
+		// 	'AppLocalStorage',
+    //   'AppDateTime',
+    //   'AppFormat'
     //     ],
     //     'vendor/bundles/app.vendor.01.bundle': [
-    //         "jquery",
-    //         "bootstrap"
+    //         'jquery',
+    //         'bootstrap'
     //     ],
     //     'vendor/bundles/app.vendor.02.bundle': [
-    //         "underscore",
-    //         "backbone",
-    //         "text",
-    //         "jquery.XDomainRequest"
+    //         'underscore',
+    //         'backbone',
+    //         'text',
+    //         'jquery.XDomainRequest'
     //     ]
     // }
 });
