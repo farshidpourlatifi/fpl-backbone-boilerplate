@@ -1,0 +1,19 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Mocha Spec Runner</title>
+    <link rel="stylesheet" href="mocha/mocha.css">
+</head>
+<body>
+<div id="mocha"> </div>
+
+<script src="sinon/sinon.js"></script>
+<script src="mocha/mocha.js"></script>
+<script>mocha.setup('bdd')</script>
+<script src="chai/chai.js"></script>
+<script>var expect = chai.expect</script>
+
+<script data-main="spec/runner" src="//127.0.0.1:3030/js/vendor/require.js"></script>
+</body>
+</html>

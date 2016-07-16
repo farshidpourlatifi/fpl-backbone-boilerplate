@@ -1,0 +1,42 @@
+For Production:
+1- open a powershell 
+2- navigate to [project-root]/js/build
+3- run: .\build.ps1
+This will generate all the bundles.
+The [project-root]/js/mega/mega.common.js needs to define bundles section.
+An example could be:
+    bundles: {
+        'mega/bundles/mega.utils.bundle': [
+			"MegaAjax", 
+			"MegaCookie", 
+			"MegaLocalStorage"
+        ],
+        'vendor/bundles/mega.vendor.01.bundle': [
+            "jquery",
+            "bootstrap",
+            "radiocheck",
+            "bootstrap-select",
+            "bootstrap-slider",
+            "jquery.dataTables",
+            "dataTables.bootstrap"
+        ]
+	}
+
+
+This is how to use just require js r.js optimizer, called in build.ps1 internally, 
+keeping for reference, please use the above approach to build the script bundles.
+
+1- Make sure you have committed all scripts under js folder in case of any data loss
+2- Open a command prompt and navigate to this folder: js\build
+3- RUN: 
+	r.js.cmd -o Build.MegaUtils.Bundle.js
+	This will build and copy the bundle file under: js/mega/bundles/mega.utils.bundle.js
+4- RUN:
+	r.js.cmd -o Build.Vendor.01.Bundle.js
+	r.js.cmd -o Build.Vendor.02.Bundle.js
+	r.js.cmd -o Build.Vendor.03.Bundle.js
+	These will generate bundles under: js/vendor/bundles/
+		mega.vendor.01.bundle.js
+		mega.vendor.02.bundle.js
+		mega.vendor.03.bundle.js
+5- Remember the [project-root]/js/mega/mega.common.js file is responsible to make use of bundles. 

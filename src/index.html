@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="viewport" content="width=device-width">
+    <link href="">
+    <title>FPL Backbone App</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="css/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/vendor/require.js"></script>
+</head>
+
+<body>
+
+    <nav id="navbar" class="navbar navbar-inverse navbar-fixed-top"></nav>
+
+    <div id="container" class="container"></div>
+    <!-- /.container -->
+
+    <script>
+        requirejs(['js/require.common.js?v=1'], function(common) {
+            requirejs([
+                'App', 'bootstrap'
+            ], function(App) {
+                App.Run();
+            });
+        });
+    </script>
+</body>
+
+</html>
