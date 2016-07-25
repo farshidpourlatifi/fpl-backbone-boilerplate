@@ -16,6 +16,10 @@ define(
         AppURLs.Static + '/js/app/static/model/contactModel.js',
         AppURLs.Static + '/js/app/static/view/contactView.js',
 
+        AppURLs.Static + '/js/app/static/model/bootstrapTestModel.js',
+        AppURLs.Static + '/js/app/static/view/bootstrapTestView.js',
+
+
         'backbone.radio'
     ],
     function(
@@ -33,7 +37,10 @@ define(
         AboutView,
 
         ContactModel,
-        ContactView
+        ContactView,
+
+        BootstrapTestModel,
+        BootstrapTestView
     ) {
         'use strict';
         var App = {
@@ -85,6 +92,9 @@ define(
                 });
                 this.staticViews.contact = new ContactView({
                     model: new ContactModel()
+                });
+                this.staticViews.bootstrapTest = new BootstrapTestView({
+                    model: new BootstrapTestModel()
                 });
 
                 Backbone.history.start({
