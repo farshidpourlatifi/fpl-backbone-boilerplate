@@ -1,3 +1,6 @@
+## WARNING!
+This is a work in progress, I'll remove this notice when it is ready to use, yet please feel free to check things around.
+
 # FPL Backbone Boilerplate
 FPL's workflow for building Backbone applications.
 
