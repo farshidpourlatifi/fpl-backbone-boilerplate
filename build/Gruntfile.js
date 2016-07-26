@@ -91,6 +91,7 @@ module.exports = function(grunt) {
 
     // Start web server
     grunt.registerTask('dev', [
+        'copy:main',
         'connect:dev',
         'connect:test',
         'watch'
